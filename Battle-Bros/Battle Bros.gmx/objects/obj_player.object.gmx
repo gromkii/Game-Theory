@@ -53,7 +53,9 @@ pad_num = global.player1_pad; //Make a script to establish controller values!
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rolling = false;
+            <string>//Reset rolling
+rolling = false;
+can_hit = true;
 movespeed = 8;
 rollspeed = 15;
 </string>
@@ -78,7 +80,9 @@ rollspeed = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_roll = true;
+            <string>///Can_roll
+
+can_roll = true;
 can_hit = true;
 </string>
           </argument>
@@ -102,7 +106,8 @@ can_hit = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>weapon_show = false;
+            <string>//weapon_show
+weapon_show = false;
 </string>
           </argument>
         </arguments>
@@ -125,7 +130,8 @@ can_hit = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reloading = false;
+            <string>///reloading + script
+reloading = false;
 can_fire = true;
 
 reload_alarm(); 
@@ -152,7 +158,9 @@ reload_alarm();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_roll = true;
+            <string>///Backup can_roll
+
+can_roll = true;
 </string>
           </argument>
         </arguments>
@@ -175,7 +183,9 @@ reload_alarm();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_fire = true;
+            <string>///can_fire
+
+can_fire = true;
 </string>
           </argument>
         </arguments>
@@ -198,7 +208,9 @@ reload_alarm();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_hit = true;
+            <string>///can_hit
+
+can_hit = true;
 </string>
           </argument>
         </arguments>
@@ -222,26 +234,36 @@ reload_alarm();
           <argument>
             <kind>1</kind>
             <string>///Player Behaviors
-player_controls();
-player_movement();
-player_actions();
-magazine_size();
-weapon_fire();
+player_controls(); // Basic button configuration
+player_movement(); // Collision and Movement
+player_actions(); // Weapon Cycle, Rolling, etc.
+magazine_size(); // Establishes max magazine sizes and reloading
 
-if place_meeting(x,y,obj_pickup) // Pickup bullet ammmo.
+//Fire Weapons
+weapon_fire(0,obj_bullet_pistol_p1);
+weapon_fire(1,obj_bullet_shotgun_p1);
+weapon_fire(2,obj_bullet_pistol_p1);
+weapon_fire(3,obj_bullet_rocket_p1);
+weapon_fire(4,obj_bullet_railgun_p1);
+
+
+//Interaction with item pickups.
+ammo_pickup(obj_pickup_pistol,0);
+ammo_pickup(obj_pickup_shotgun,1);
+ammo_pickup(obj_pickup_assault,2);
+ammo_pickup(obj_pickup_rocket,3);
+ammo_pickup(obj_pickup_railgun,4);
+
+//Hit Detection and Damage
+bullet_damage(obj_bullet_pistol_p2,global.player1_health,2);
+if distance_to_object(obj_player2) &gt;= 128
 {
-    if ammo_clip[0] &lt; CLIP_SIZE[0]
-    {
-        ammo_clip[0] = CLIP_SIZE[0]%24;
-        ammo[0] += CLIP_SIZE[0]% 24;
-    }
-    
-    else ammo[0] += 24
-    {
-        ammo[0] = MAX_AMMO[0]
-    }
-            
-}
+    bullet_damage(obj_bullet_shotgun_p2,global.player1_health,6);
+} 
+else bullet_damage(obj_bullet_shotgun_p2,global.player1_health,10);
+bullet_damage(obj_bullet_rocket_p2,global.player1_health,15);
+bullet_damage(obj_bullet_railgun_p2,global.player1_health,25);
+
 
 </string>
           </argument>
@@ -307,6 +329,8 @@ if (reloading = true)
     draw_set_color(c_red)
     draw_text(x+32, y+32, "Reloading!");
 }
+
+draw_text(x-64,y-64,current_selection);
 
 
 if (can_roll = false) draw_text(x, y-96, "Rolling!");

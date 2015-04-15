@@ -20,7 +20,7 @@ else if ammo[current_selection] < CLIP_SIZE[current_selection]
         ammo_clip[current_selection] += ammo_added;
     }
     //else ammo -= needed_ammo
-    else if needed_ammo < ammo[current_selection]
+    else if needed_ammo <= ammo[current_selection]
     {
         ammo[current_selection] -= needed_ammo;
         //ammo clip = clip_size

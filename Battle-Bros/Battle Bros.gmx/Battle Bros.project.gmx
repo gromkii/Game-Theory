@@ -15,9 +15,18 @@
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\spr_bullet_pistol</sprite>
+      <sprite>sprites\spr_bullet_shotgun</sprite>
+      <sprite>sprites\spr_bullet_assault</sprite>
+      <sprite>sprites\spr_bullet_rocket</sprite>
+      <sprite>sprites\spr_bullet_railgun</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_weapon_index</sprite>
+      <sprite>sprites\spr_pickup_pistol</sprite>
+      <sprite>sprites\spr_pickup_shotgun</sprite>
+      <sprite>sprites\spr_pickup_assault</sprite>
+      <sprite>sprites\spr_pickup_rocket</sprite>
+      <sprite>sprites\spr_obj_railgun</sprite>
     </sprites>
     <sprite>sprites\spr_weapon_cursor</sprite>
   </sprites>
@@ -36,6 +45,8 @@
         <script>scripts\player_movement.gml</script>
         <script>scripts\magazine_size.gml</script>
         <script>scripts\reload_alarm.gml</script>
+        <script>scripts\ammo_pickup.gml</script>
+        <script>scripts\bullet_damage.gml</script>
       </scripts>
     </scripts>
     <scripts name="HUD">
@@ -53,9 +64,26 @@
     </objects>
     <objects name="Projectiles">
       <object>objects\obj_bullet</object>
+      <objects name="Player 1">
+        <object>objects\obj_bullet_pistol_p1</object>
+        <object>objects\obj_bullet_shotgun_p1</object>
+        <object>objects\obj_bullet_rocket_p1</object>
+        <object>objects\obj_bullet_railgun_p1</object>
+      </objects>
+      <objects name="Player 2">
+        <object>objects\obj_bullet_pistol_p2</object>
+        <object>objects\obj_bullet_rocket_p2</object>
+        <object>objects\obj_bullet_railgun_p2</object>
+        <object>objects\obj_bullet_shotgun_p2</object>
+      </objects>
     </objects>
     <objects name="Pickups">
       <object>objects\obj_pickup</object>
+      <object>objects\obj_pickup_pistol</object>
+      <object>objects\obj_pickup_shotgun</object>
+      <object>objects\obj_pickup_assault</object>
+      <object>objects\obj_pickup_rocket</object>
+      <object>objects\obj_pickup_railgun</object>
     </objects>
     <object>objects\obj_select_P1</object>
   </objects>

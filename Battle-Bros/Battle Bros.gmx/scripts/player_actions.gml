@@ -24,7 +24,8 @@ if place_meeting(x,y+1,obj_wall) && key_roll && can_roll = true
     can_roll = false;
     alarm[5] = 60;
     rolling = true;
-    alarm[6] = 20;
+    alarm[0] = 20;
+    alarm[6] = 30;
 }
 
 if can_roll = false && rolling = true

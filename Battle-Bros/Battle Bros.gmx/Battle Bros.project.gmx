@@ -35,18 +35,18 @@
   <scripts name="scripts">
     <scripts name="Player">
       <scripts name="Create">
-        <script>scripts\player_init.gml</script>
         <script>scripts\ammo_count.gml</script>
+        <script>scripts\player_init.gml</script>
       </scripts>
       <scripts name="Step">
-        <script>scripts\player_actions.gml</script>
-        <script>scripts\player_controls.gml</script>
-        <script>scripts\weapon_fire.gml</script>
-        <script>scripts\player_movement.gml</script>
-        <script>scripts\magazine_size.gml</script>
-        <script>scripts\reload_alarm.gml</script>
         <script>scripts\ammo_pickup.gml</script>
         <script>scripts\bullet_damage.gml</script>
+        <script>scripts\magazine_size.gml</script>
+        <script>scripts\player_actions.gml</script>
+        <script>scripts\player_controls.gml</script>
+        <script>scripts\player_movement.gml</script>
+        <script>scripts\reload_alarm.gml</script>
+        <script>scripts\weapon_fire.gml</script>
       </scripts>
     </scripts>
     <scripts name="HUD">

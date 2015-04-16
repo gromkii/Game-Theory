@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>hspeed = obj_player2.image_xscale * 20;
+
 </string>
           </argument>
         </arguments>

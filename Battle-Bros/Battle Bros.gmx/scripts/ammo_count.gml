@@ -6,6 +6,8 @@
 // 3 - Rocket Launcher
 // 4 - Railgun
 
+enum weapon { PISTOL, SHOTGUN, ASSAULT, ROCKET, RAILGUN };
+
 current_selection = 0;
 
 for (i = 0; i < 5; i++) //Set all ammount count to 0.

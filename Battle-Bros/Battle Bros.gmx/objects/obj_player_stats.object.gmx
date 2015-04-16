@@ -28,8 +28,35 @@
             <string>global.player1_health = 100;
 global.player2_health = 100;
 
+/*
 global.player1_stock = match_stock;
 global.player2_stock = match_stock;
+*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_black);
+
+draw_text(x+32, y+32, global.player1_health);
 </string>
           </argument>
         </arguments>

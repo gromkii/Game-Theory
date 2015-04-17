@@ -242,9 +242,9 @@ magazine_size(); // Establishes max magazine sizes and reloading
 //Fire Weapons
 weapon_fire(0,obj_bullet_pistol_p1);
 weapon_fire(1,obj_bullet_shotgun_p1);
-weapon_fire(2,obj_bullet_pistol_p1);
+weapon_fire(2,obj_bullet_assault_p1);
 weapon_fire(3,obj_bullet_rocket_p1);
-weapon_fire(4,obj_bullet_railgun_p1);
+weapon_fire(4,obj_bullet_railgun_charge_p1);
 
 
 //Interaction with item pickups.
@@ -252,9 +252,15 @@ ammo_pickup(obj_pickup_pistol,0);
 ammo_pickup(obj_pickup_shotgun,1);
 ammo_pickup(obj_pickup_assault,2);
 ammo_pickup(obj_pickup_rocket,3);
-ammo_pickup(obj_pickup_railgun,4);
+if place_meeting(x,y,obj_pickup_railgun) //Railgun ammo is a special case.
+{
+    ammo_clip[4] += 1;
+    if (ammo_clip[4] &gt; 1) ammo_clip[4] = 1;
+    with (instance_nearest(x,y,obj_pickup_railgun)) instance_destroy();
+}
 
 //Hit Detection and Damage
+/*
 bullet_damage(obj_bullet_pistol_p2,global.player1_health,2);
 if distance_to_object(obj_player2) &gt;= 128
 {
@@ -262,7 +268,11 @@ if distance_to_object(obj_player2) &gt;= 128
 } 
 else bullet_damage(obj_bullet_shotgun_p2,global.player1_health,10);
 bullet_damage(obj_bullet_rocket_p2,global.player1_health,15);
+bullet_damage(obj_bullet_rocket_splash,global.player1_health,5);
 bullet_damage(obj_bullet_railgun_p2,global.player1_health,25);
+*/ 
+
+//Temporaily taking that off for debugging purposes.
 
 
 </string>
@@ -287,11 +297,11 @@ bullet_damage(obj_bullet_railgun_p2,global.player1_health,25);
             <kind>1</kind>
             <string>///Camera Controls
 /*
-view_hview[0]=(distance_to_object(obj_player2)*.75);
+view_hview[0]=(distance_to_object(obj_player2));
 if (view_hview[0] &lt; 480) view_hview[0] = 480;
 if (view_hview[0] &gt; 720) view_hview[0] = 720;
 
-view_wview[0]=(distance_to_object(obj_player2)*1.5);
+view_wview[0]=(distance_to_object(obj_player2));
 if (view_wview[0] &lt; 960) view_wview[0] = 960;
 if (view_wview[0] &gt; 1280) view_wview[0] = 1280;
 

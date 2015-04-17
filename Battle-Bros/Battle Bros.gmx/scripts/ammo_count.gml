@@ -6,7 +6,10 @@
 // 3 - Rocket Launcher
 // 4 - Railgun
 
-enum weapon { PISTOL, SHOTGUN, ASSAULT, ROCKET, RAILGUN };
+// enum weapons { PISTOL, SHOTGUN, ASSAULT, ROCKET, RAILGUN }; 
+// ^ This would've been more work, but hella readability. weapons.PISTOL = 0
+// Not dealing with enumeration since y'all aren't editing the code~ 
+// - Dax :3
 
 current_selection = 0;
 
@@ -25,7 +28,7 @@ MAX_AMMO[0] = 60;
 MAX_AMMO[1] = 24;
 MAX_AMMO[2] = 120;
 MAX_AMMO[3] = 6;
-MAX_AMMO[4] = 1;
+MAX_AMMO[4] = 0;
 
 //Set up constants for maximum magazine size.
 CLIP_SIZE[0] = 12;
@@ -44,6 +47,6 @@ RELOAD_SPEED[4] = 0;
 //Set up constants to establish firing speeds.
 FIRE_SPEED[0] = 30;
 FIRE_SPEED[1] = 60;
-FIRE_SPEED[2] = 30;
+FIRE_SPEED[2] = 15;
 FIRE_SPEED[3] = 120;
 FIRE_SPEED[4] = 120;

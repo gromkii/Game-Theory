@@ -60,21 +60,33 @@
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_player2</object>
-      <object>objects\obj_player_stats</object>
+      <objects name="Mechanics">
+        <object>objects\obj_player_stats</object>
+        <object>objects\obj_select_P1</object>
+        <object>objects\obj_select_p2</object>
+      </objects>
     </objects>
     <objects name="Projectiles">
       <object>objects\obj_bullet</object>
       <objects name="Player 1">
         <object>objects\obj_bullet_pistol_p1</object>
-        <object>objects\obj_bullet_shotgun_p1</object>
-        <object>objects\obj_bullet_rocket_p1</object>
-        <object>objects\obj_bullet_railgun_p1</object>
+        <object>objects\obj_bullet_assault_p1</object>
+        <objects name="Shotgun">
+          <object>objects\obj_bullet_shotgun_p1</object>
+          <object>objects\obj_bullet_shotgun_p1_up</object>
+          <object>objects\obj_bullet_shotgun_p1_down</object>
+        </objects>
+        <objects name="Rocket">
+          <object>objects\obj_bullet_rocket_p1</object>
+          <object>objects\obj_bullet_rocket_splash</object>
+        </objects>
+        <objects name="Railgun">
+          <object>objects\obj_bullet_railgun_p1</object>
+          <object>objects\obj_bullet_railgun_charge_p1</object>
+        </objects>
       </objects>
-      <objects name="Player 2">
+      <objects name="Player2">
         <object>objects\obj_bullet_pistol_p2</object>
-        <object>objects\obj_bullet_rocket_p2</object>
-        <object>objects\obj_bullet_railgun_p2</object>
-        <object>objects\obj_bullet_shotgun_p2</object>
       </objects>
     </objects>
     <objects name="Pickups">
@@ -85,7 +97,6 @@
       <object>objects\obj_pickup_rocket</object>
       <object>objects\obj_pickup_railgun</object>
     </objects>
-    <object>objects\obj_select_P1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_controller</room>

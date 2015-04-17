@@ -12,6 +12,13 @@ if (key_fire && can_fire = true && ammo_clip[argument0] > 0 && reloading = false
         instance_create(x,y,obj_bullet_shotgun_p1_down);
     }
     
+    else if argument1 = obj_bullet_shotgun_p2
+    {
+        instance_create(x,y,obj_bullet_shotgun_p2);
+        instance_create(x,y,obj_bullet_shotgun_p2_up);
+        instance_create(x,y,obj_bullet_shotgun_p2_down);
+    }
+    
     else instance_create(x+32*image_xscale,y,argument1);
     
     

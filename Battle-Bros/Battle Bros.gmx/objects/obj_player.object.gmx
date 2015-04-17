@@ -30,6 +30,8 @@
 player_init();
 ammo_count();
 
+hit_points = 100;
+
 pad_num = global.player1_pad; //Make a script to establish controller values!
 </string>
           </argument>
@@ -260,20 +262,16 @@ if place_meeting(x,y,obj_pickup_railgun) //Railgun ammo is a special case.
 }
 
 //Hit Detection and Damage
-/*
-bullet_damage(obj_bullet_pistol_p2,global.player1_health,2);
-if distance_to_object(obj_player2) &gt;= 128
+bullet_damage(obj_bullet_pistol_p2,2);
+if distance_to_object(obj_player) &gt; 256
 {
-    bullet_damage(obj_bullet_shotgun_p2,global.player1_health,6);
-} 
-else bullet_damage(obj_bullet_shotgun_p2,global.player1_health,10);
-bullet_damage(obj_bullet_rocket_p2,global.player1_health,15);
-bullet_damage(obj_bullet_rocket_splash,global.player1_health,5);
-bullet_damage(obj_bullet_railgun_p2,global.player1_health,25);
-*/ 
-
-//Temporaily taking that off for debugging purposes.
-
+    bullet_damage(obj_bullet_shotgun_p2,12);
+}
+else bullet_damage(obj_bullet_shotgun_p2,6);
+bullet_damage(obj_bullet_assault_p2,3);
+bullet_damage(obj_bullet_rocket_p2, 20);
+bullet_damage(obj_bullet_rocket_splash,5);
+bullet_damage(obj_bullet_railgun_p2,40);
 
 </string>
           </argument>
@@ -353,6 +351,8 @@ if (can_roll = false) draw_text(x, y-96, "Rolling!");
 //Draw the Weapon Selections
 draw_weapons();
 draw_set_alpha(1);
+
+draw_text(x,y-96,hit_points);
 </string>
           </argument>
         </arguments>

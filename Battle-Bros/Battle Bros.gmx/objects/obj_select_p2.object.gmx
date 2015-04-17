@@ -76,7 +76,7 @@ if gamepad_button_check_pressed(3, gp_start)
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_black);
-draw_text(view_wview[0]/2,view_hview[0]/2,"Press Enter to Select P1 Controller");
+draw_text(view_wview[0]/2,view_hview[0]/2,"Press Enter to Select P2 Controller");
 </string>
           </argument>
         </arguments>

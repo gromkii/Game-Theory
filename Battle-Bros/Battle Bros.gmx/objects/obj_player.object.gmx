@@ -308,6 +308,11 @@ if (view_wview[0] &gt; 1280) view_wview[0] = 1280;
 view_xview[0]=((x+obj_player2.x)/2)-(view_wview[0]/2)//sets the x position of the view
 view_yview[0]=((y+obj_player2.y)/2)-(view_hview[0]/2)// sets the y position of the view
 */
+
+
+
+view_xview[0]=((x+obj_player2.x)/2)-(view_wview[0]/2)
+view_yview[0]=((y+obj_player2.y)/2)-(view_hview[0]/2)
 </string>
           </argument>
         </arguments>

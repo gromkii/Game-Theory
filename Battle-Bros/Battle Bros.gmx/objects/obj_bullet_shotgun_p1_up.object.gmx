@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>speed = obj_player.image_xscale * 20;
 direction += 15;
+
+bounce = 3;
 </string>
           </argument>
         </arguments>
@@ -49,7 +51,11 @@ direction += 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>bounce -= 1;
+
+direction *= -1;
+
+if (bounce &lt; 0) instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -20,7 +20,7 @@
       <sprite>sprites\spr_bullet_rocket</sprite>
       <sprite>sprites\spr_bullet_railgun</sprite>
     </sprites>
-    <sprites name="Weapons">
+    <sprites name="Pickups">
       <sprite>sprites\spr_weapon_index</sprite>
       <sprite>sprites\spr_pickup_pistol</sprite>
       <sprite>sprites\spr_pickup_shotgun</sprite>
@@ -93,9 +93,9 @@
       <object>objects\obj_pickup</object>
       <object>objects\obj_pickup_pistol</object>
       <object>objects\obj_pickup_shotgun</object>
+      <object>objects\obj_pickup_railgun</object>
       <object>objects\obj_pickup_assault</object>
       <object>objects\obj_pickup_rocket</object>
-      <object>objects\obj_pickup_railgun</object>
     </objects>
   </objects>
   <rooms name="rooms">

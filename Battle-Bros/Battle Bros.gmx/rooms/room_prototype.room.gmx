@@ -72,6 +72,7 @@
     <instance objName="obj_pickup_railgun" x="800" y="608" name="inst_4C366265" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pickup_railgun" x="704" y="640" name="inst_6CF9E619" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player2" x="1152" y="640" name="inst_A2B48689" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_powerup_shield" x="544" y="640" name="inst_BFE1DC6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

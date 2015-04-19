@@ -16,4 +16,3 @@ if (place_meeting(x,y,argument0) && can_hit = true)
 }
 */
 
-

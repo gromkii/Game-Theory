@@ -38,6 +38,10 @@
       <sprite>sprites\spr_weapon_index</sprite>
       <sprite>sprites\spr_weapon_cursor</sprite>
     </sprites>
+    <sprites name="Power-Up Effects">
+      <sprite>sprites\spr_powerup_shield</sprite>
+      <sprite>sprites\spr_powerup_reflect</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -109,6 +113,7 @@
           <object>objects\obj_bullet_railgun_charge_p2</object>
         </objects>
       </objects>
+      <object>objects\obj_bullet</object>
     </objects>
     <objects name="Pickups">
       <objects name="Ammo">

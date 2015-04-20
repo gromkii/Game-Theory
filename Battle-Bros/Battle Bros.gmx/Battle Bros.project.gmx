@@ -130,6 +130,10 @@
         <object>objects\obj_powerup_speed</object>
       </objects>
     </objects>
+    <objects name="Powers">
+      <object>objects\obj_power_shield_p1</object>
+      <object>objects\obj_power_reflect_p1</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_controller</room>

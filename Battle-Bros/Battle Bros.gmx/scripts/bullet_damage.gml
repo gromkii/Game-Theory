@@ -15,4 +15,3 @@ if (place_meeting(x,y,argument0) && can_hit = true)
     with (instance_nearest(x,y,argument0)) instance_destroy();
 }
 */
-

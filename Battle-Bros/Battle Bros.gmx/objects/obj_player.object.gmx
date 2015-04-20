@@ -331,19 +331,23 @@ view_yview[0]=((y+obj_player2.y)/2)-(view_hview[0]/2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Power-Up Effects
-
+            <string>///Powerup Effects
 if place_meeting(x,y,obj_powerup_shield)
 {
-    instance_create(x,y,obj_power_shield)
-    with (instance_nearest(x,y,obj_power_shield))
-    {
-        player_number = 1;
-    }
     with (instance_nearest(x,y,obj_powerup_shield))
     {
         instance_destroy();
     }
+    instance_create(x,y,obj_power_shield_p1)
+}
+
+if place_meeting(x,y,obj_powerup_reflect)
+{
+    with (instance_nearest(x,y,obj_powerup_reflect))
+    {
+        instance_destroy();
+    }
+    instance_create(x,y,obj_power_reflect_p1);
 }
 </string>
           </argument>

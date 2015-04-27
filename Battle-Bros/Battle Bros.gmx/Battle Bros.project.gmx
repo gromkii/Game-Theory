@@ -37,6 +37,7 @@
     <sprites name="HUD">
       <sprite>sprites\spr_weapon_index</sprite>
       <sprite>sprites\spr_weapon_cursor</sprite>
+      <sprite>sprites\spr_dmg_index</sprite>
     </sprites>
     <sprites name="Power-Up Effects">
       <sprite>sprites\spr_powerup_shield</sprite>
@@ -66,6 +67,9 @@
       <script>scripts\draw_weapons.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_main</font>
+  </fonts>
   <objects name="objects">
     <objects name="Environments">
       <object>objects\obj_wall</object>
@@ -138,6 +142,29 @@
   <rooms name="rooms">
     <room>rooms\room_controller</room>
     <room>rooms\room_prototype</room>
+    <rooms name="Menus">
+      <room>rooms\room_title</room>
+      <room>rooms\room_credits</room>
+      <room>rooms\room_controls</room>
+      <room>rooms\room_mainmenu</room>
+      <room>rooms\room_arena_selection</room>
+      <room>rooms\room_game_mode</room>
+    </rooms>
+    <rooms name="Arenas">
+      <rooms name="Lava Word">
+        <room>rooms\room_lava_stock</room>
+        <room>rooms\room_lava_timed</room>
+      </rooms>
+      <rooms name="Spike World">
+        <room>rooms\room_spike_stock</room>
+        <room>rooms\room_spike_timed</room>
+      </rooms>
+      <rooms name="Space">
+        <room>rooms\room_space_timed</room>
+        <room>rooms\room_space_stock</room>
+      </rooms>
+      <room>rooms\room_results</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

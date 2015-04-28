@@ -13,10 +13,15 @@
       <sprites name="Player1">
         <sprite>sprites\spr_p1_pistol</sprite>
         <sprite>sprites\spr_p1_rocket</sprite>
-        <sprite>sprites\spr_player1</sprite>
         <sprite>sprites\spr_p1_assault</sprite>
+        <sprite>sprites\spr_player1</sprite>
       </sprites>
-      <sprite>sprites\spr_player2</sprite>
+      <sprites name="Player2">
+        <sprite>sprites\spr_p2_pistol</sprite>
+        <sprite>sprites\spr_p2_rocket</sprite>
+        <sprite>sprites\spr_p2_assault</sprite>
+        <sprite>sprites\spr_player2</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\spr_bullet_pistol</sprite>

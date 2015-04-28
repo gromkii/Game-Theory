@@ -1,3 +1,22 @@
+if hsp != 0 && place_meeting(x,y+1,obj_wall)
+{
+    image_speed = .5;
+}
+
+else if !place_meeting(x,y+1,obj_wall)
+{
+    image_index = 2;
+    image_speed = 0;
+}
+
+else
+{
+    image_index = 0;
+    image_speed = .5;
+}
+
+if (key_flip) image_xscale *= -1;
+
 draw_player = current_selection;
 
 switch (draw_player)
@@ -25,21 +44,4 @@ case 4:
     image_speed = 0;
     break;
     
-}  
-
-if hsp != 0 && place_meeting(x,y+1,obj_wall)
-{
-    image_speed = .5;
-}
-
-else if !place_meeting(x,y+1,obj_wall)
-{
-    image_index = 2;
-    image_speed = 0;
-}
-
-else
-{
-    image_index = 0;
-    image_speed = .5;
-}
+} 

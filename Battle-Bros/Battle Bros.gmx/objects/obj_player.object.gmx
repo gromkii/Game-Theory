@@ -371,7 +371,8 @@ if place_meeting(x,y,obj_powerup_reflect)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>
+draw_player1();
 draw_set_color(c_black);
 draw_text(x+32,y-32,string(ammo[current_selection]) + '/' + string(MAX_AMMO[current_selection]));
 draw_text(x+32,y,ammo_clip[current_selection]);
@@ -392,7 +393,7 @@ draw_set_alpha(1);
 
 draw_text(x,y-96,hit_points);
 
-draw_player1();
+
 </string>
           </argument>
         </arguments>

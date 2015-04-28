@@ -45,4 +45,9 @@ if can_roll = false && rolling = true
     x += hsp;
 }
 
+//Reaction to hit
+if (can_hit = false) image_blend = c_red;
+else image_blend = c_white;
+
+
 if (key_esc) game_end();

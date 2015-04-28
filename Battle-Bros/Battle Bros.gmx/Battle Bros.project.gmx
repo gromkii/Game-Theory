@@ -10,7 +10,12 @@
       <sprite>sprites\spr_wall</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\spr_player1</sprite>
+      <sprites name="Player1">
+        <sprite>sprites\spr_p1_pistol</sprite>
+        <sprite>sprites\spr_p1_rocket</sprite>
+        <sprite>sprites\spr_player1</sprite>
+        <sprite>sprites\spr_p1_assault</sprite>
+      </sprites>
       <sprite>sprites\spr_player2</sprite>
     </sprites>
     <sprites name="Projectiles">
@@ -43,6 +48,7 @@
       <sprite>sprites\spr_powerup_shield</sprite>
       <sprite>sprites\spr_powerup_reflect</sprite>
     </sprites>
+    <sprite>sprites\spr_blank</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -61,6 +67,9 @@
         <script>scripts\player_movement.gml</script>
         <script>scripts\reload_alarm.gml</script>
         <script>scripts\weapon_fire.gml</script>
+      </scripts>
+      <scripts name="Draw">
+        <script>scripts\draw_player1.gml</script>
       </scripts>
     </scripts>
     <scripts name="HUD">
@@ -118,6 +127,7 @@
         </objects>
       </objects>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_bullet2</object>
     </objects>
     <objects name="Pickups">
       <objects name="Ammo">
@@ -138,6 +148,7 @@
       <object>objects\obj_power_shield_p1</object>
       <object>objects\obj_power_reflect_p1</object>
     </objects>
+    <object>objects\obj_title_screen</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_controller</room>

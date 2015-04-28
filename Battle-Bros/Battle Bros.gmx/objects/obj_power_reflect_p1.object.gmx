@@ -104,16 +104,16 @@ can_hit = true;
 }
 
 
-if place_meeting(x,y,obj_bullet) &amp;&amp; can_hit = true
+if place_meeting(x,y,obj_bullet2) &amp;&amp; can_hit = true
 {
     alarm[1] = 30;
     hit_points -= 1;
-    with (instance_nearest(x,y,obj_bullet)) direction*=-1;
+    with (instance_nearest(x,y,obj_bullet2)) direction = irandom(360);
 }   
 
-else if place_meeting(x,y,obj_bullet) &amp;&amp; can_hit = true
+else if place_meeting(x,y,obj_bullet2) &amp;&amp; can_hit = true
 {
-    with (instance_nearest(x,y,obj_bullet)) direction *= -1;
+    with (instance_nearest(x,y,obj_bullet2)) direction = irandom(360);
 }
 
 x += obj_player.hsp;

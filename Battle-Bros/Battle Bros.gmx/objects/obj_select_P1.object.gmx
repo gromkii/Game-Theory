@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Get Player 1
-if gamepad_button_check_pressed(0, gp_start)
+if (gamepad_button_check_pressed(0, gp_start) || gamepad_button_check_pressed(0, gp_face1))
 {
     global.player1_pad = 0;
     
@@ -34,7 +34,7 @@ if gamepad_button_check_pressed(0, gp_start)
     instance_create(x,y,obj_select_p2);
 }
 
-if gamepad_button_check_pressed(1, gp_start)
+if (gamepad_button_check_pressed(1, gp_start) || gamepad_button_check_pressed(1,gp_face1))
 {
     global.player1_pad = 1;
     
@@ -42,7 +42,7 @@ if gamepad_button_check_pressed(1, gp_start)
     instance_create(x,y,obj_select_p2);
 }
 
-if gamepad_button_check_pressed(2, gp_start)
+if (gamepad_button_check_pressed(2, gp_start) || gamepad_button_check_pressed(2,gp_face1))
 {
     global.player1_pad = 2;
     //room_goto(room_prototype)
@@ -50,7 +50,7 @@ if gamepad_button_check_pressed(2, gp_start)
     instance_create(x,y,obj_select_p2);
 }
 
-if gamepad_button_check_pressed(3, gp_start)
+if (gamepad_button_check_pressed(3, gp_start) || gamepad_button_check_pressed(3, gp_face1))
 {
     global.player1_pad = 3;
     //room_goto(room_prototype)

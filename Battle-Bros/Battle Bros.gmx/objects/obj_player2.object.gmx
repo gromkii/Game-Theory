@@ -273,6 +273,12 @@ bullet_damage(obj_bullet_rocket_p1, 20);
 bullet_damage(obj_bullet_rocket_splash,5);
 bullet_damage(obj_bullet_railgun_p1,40);
 
+if hit_points &lt;= 0
+{
+    global.p1_stock -= 1;
+    instance_destroy();
+}
+
 
 
 

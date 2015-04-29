@@ -10,8 +10,8 @@ rolling = false;
 //Movement
 hsp = 0;
 vsp = 0;
-movespeed = 8;
-jumpspeed = 8;
-rollspeed = 15;
+movespeed = 13;
+jumpspeed = 13;
+rollspeed = 20;
 dir = 1;
-grav = .2;
+grav = .55;

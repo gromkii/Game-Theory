@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprites name="Environments">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_small_wall</sprite>
     </sprites>
     <sprites name="Player">
       <sprites name="Player1">
@@ -55,7 +56,9 @@
     </sprites>
     <sprite>sprites\spr_blank</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_spike</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player">
@@ -87,6 +90,7 @@
   <objects name="objects">
     <objects name="Environments">
       <object>objects\obj_wall</object>
+      <object>objects\obj_small_wall</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -154,6 +158,10 @@
       <object>objects\obj_power_reflect_p1</object>
     </objects>
     <object>objects\obj_title_screen</object>
+    <objects name="Game Modes">
+      <object>objects\obj_stock_mode</object>
+      <object>objects\obj_p1_spawn</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_controller</room>

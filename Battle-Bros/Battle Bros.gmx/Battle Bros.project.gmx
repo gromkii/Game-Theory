@@ -57,7 +57,9 @@
     <sprite>sprites\spr_blank</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_spike</background>
+    <background>background\bg_spikeworld</background>
+    <background>background\bg_lavaworld</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -83,6 +85,7 @@
     <scripts name="HUD">
       <script>scripts\draw_weapons.gml</script>
     </scripts>
+    <script>scripts\To_Do_List.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
@@ -189,6 +192,7 @@
       </rooms>
       <room>rooms\room_results</room>
     </rooms>
+    <room>rooms\room15</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

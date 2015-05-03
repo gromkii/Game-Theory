@@ -28,6 +28,7 @@
             <string>speed = obj_player.image_xscale * 20;
 
 bounce = 3;
+image_xscale = sign(obj_player.image_xscale);
 </string>
           </argument>
         </arguments>

@@ -30,6 +30,8 @@ faster = false;
 alarm[0] = 30;
 
 dir = sign(hspeed);
+
+image_xscale = sign(obj_player.image_xscale);
 </string>
           </argument>
         </arguments>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>hspeed = obj_player.image_xscale * 20;
+image_xscale = sign(obj_player.image_xscale);
 </string>
           </argument>
         </arguments>

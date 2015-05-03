@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Get Player 1
+            <string>///Get Player 2
 if gamepad_button_check_pressed(0, gp_start)
 {
     global.player2_pad = 0;

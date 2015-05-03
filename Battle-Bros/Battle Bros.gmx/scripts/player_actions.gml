@@ -1,4 +1,4 @@
-if (key_flip) image_xscale *= -1; //Right Bumper.
+if (key_flip && rolling = false) image_xscale *= -1; //Right Bumper.
 
 if (reloading = false)
 {

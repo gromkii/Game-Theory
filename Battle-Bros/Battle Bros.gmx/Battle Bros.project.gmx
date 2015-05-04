@@ -9,6 +9,7 @@
     <sprites name="Environments">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_small_wall</sprite>
+      <sprite>sprites\spr_lava_bad</sprite>
     </sprites>
     <sprites name="Player">
       <sprites name="Player1">
@@ -49,6 +50,9 @@
       <sprite>sprites\spr_weapon_index</sprite>
       <sprite>sprites\spr_weapon_cursor</sprite>
       <sprite>sprites\spr_dmg_index</sprite>
+      <sprite>sprites\spr_p1_port</sprite>
+      <sprite>sprites\spr_p2_port</sprite>
+      <sprite>sprites\spr_reloading</sprite>
     </sprites>
     <sprites name="Power-Up Effects">
       <sprite>sprites\spr_powerup_shield</sprite>
@@ -89,11 +93,13 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_main</font>
+    <font>fonts\font_HUD</font>
   </fonts>
   <objects name="objects">
     <objects name="Environments">
       <object>objects\obj_wall</object>
       <object>objects\obj_small_wall</object>
+      <object>objects\obj_lava_damage</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -180,7 +186,6 @@
     <rooms name="Arenas">
       <rooms name="Lava Word">
         <room>rooms\room_lava_stock</room>
-        <room>rooms\room_lava_timed</room>
       </rooms>
       <rooms name="Spike World">
         <room>rooms\room_spike_stock</room>

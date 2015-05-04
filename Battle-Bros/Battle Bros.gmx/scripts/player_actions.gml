@@ -45,8 +45,13 @@ if can_roll = false && rolling = true
     x += hsp;
 }
 
+if rolling = true
+{
+    can_hit = false;
+}
+
 //Reaction to hit
-if (can_hit = false) image_blend = c_red;
+if (can_hit = false && rolling = false) image_blend = c_red;
 else image_blend = c_white;
 
 

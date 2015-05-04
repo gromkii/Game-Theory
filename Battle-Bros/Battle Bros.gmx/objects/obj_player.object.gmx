@@ -262,16 +262,16 @@ if place_meeting(x,y,obj_pickup_railgun) //Railgun ammo is a special case.
 }
 
 //Hit Detection and Damage
-bullet_damage(obj_bullet_pistol_p2,2);
-if distance_to_object(obj_player) &gt; 256
+bullet_damage(obj_bullet_pistol_p2,10);
+if distance_to_object(obj_player) &lt; 256
 {
-    bullet_damage(obj_bullet_shotgun_p2,12);
+    bullet_damage(obj_bullet_shotgun_p2,20);
 }
-else bullet_damage(obj_bullet_shotgun_p2,6);
-bullet_damage(obj_bullet_assault_p2,3);
-bullet_damage(obj_bullet_rocket_p2, 20);
-bullet_damage(obj_bullet_rocket_splash,5);
-bullet_damage(obj_bullet_railgun_p2,40);
+else bullet_damage(obj_bullet_shotgun_p2,15);
+bullet_damage(obj_bullet_assault_p2,15);
+bullet_damage(obj_bullet_rocket_p2, 30);
+bullet_damage(obj_bullet_rocket_splash,15);
+bullet_damage(obj_bullet_railgun_p2,50);
 
 
 if hit_points &lt;= 0
@@ -469,22 +469,15 @@ draw_text(x+32,y-32,string(ammo[current_selection]) + '/' + string(MAX_AMMO[curr
 draw_text(x+32,y,ammo_clip[current_selection]);
 if (reloading = true)
 {
-    draw_set_color(c_red)
-    draw_text(x+32, y+32, "Reloading!");
+    increase = .5;
+    increase += .05;
+    if (increase &gt; 1) increase = 1;
+    draw_sprite_ext(spr_reloading,0,x,y-64,1,1,0,c_white,increase)
 }
-
-draw_text(x-64,y-64,current_selection);
-
-
-if (can_roll = false) draw_text(x, y-96, "Rolling!");
 
 //Draw the Weapon Selections
 draw_weapons();
 draw_set_alpha(1);
-
-draw_text(x,y-96,hit_points);
-
-
 </string>
           </argument>
         </arguments>

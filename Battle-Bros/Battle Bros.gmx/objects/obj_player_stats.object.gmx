@@ -28,6 +28,9 @@
             <string>global.player1_health = 100;
 global.player2_health = 100;
 
+global.p1_stock = 3;
+global.p2_stock = 3;
+
 /*
 global.player1_stock = match_stock;
 global.player2_stock = match_stock;
@@ -54,11 +57,39 @@ global.player2_stock = match_stock;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_black);
+            <string>draw_sprite(spr_p1_port,0,64,64)
+draw_set_font(font_HUD);
 
-draw_text(x+32, y+32, global.player1_health);
-draw_text(x+32, y+64, obj_player2.hit_points);
-draw_text(x+34, y+96, obj_player2.can_hit);
+//P1 Health
+draw_set_color(c_white);
+draw_text(x+50,20,string(obj_player.hit_points)+ "/100");
+draw_set_color(c_black);
+draw_text(x+48,16,string(obj_player.hit_points)+ "/100");
+
+//P1 Stocks
+draw_set_color(c_white);
+draw_text(x+50,40,"LIVES: " + string(global.p1_stock));
+draw_set_color(c_black);
+draw_text(x+48,36,"LIVES: " + string(global.p1_stock));
+
+
+//P2 Hitpoints
+draw_set_color(c_white);
+draw_text(x+1502,20,string(obj_player2.hit_points) + "/100");
+draw_set_color(c_black);
+draw_sprite(spr_p2_port, 0, 1856, 64);
+draw_text(x+1500,16,string(obj_player2.hit_points) + "/100");
+
+//P2 Stocks
+draw_set_color(c_white);
+draw_text(x+1502,40,"LIVES: " + string(global.p2_stock));
+draw_set_color(c_black);
+draw_text(x+1500,36,"LIVES: " + string(global.p2_stock));
+
+
+
+//Reset Font
+draw_set_font(font_main);
 </string>
           </argument>
         </arguments>

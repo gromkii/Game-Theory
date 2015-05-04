@@ -53,6 +53,7 @@
       <sprite>sprites\spr_p1_port</sprite>
       <sprite>sprites\spr_p2_port</sprite>
       <sprite>sprites\spr_reloading</sprite>
+      <sprite>sprites\spr_title</sprite>
     </sprites>
     <sprites name="Power-Up Effects">
       <sprite>sprites\spr_powerup_shield</sprite>
@@ -64,6 +65,7 @@
     <background>background\bg_spikeworld</background>
     <background>background\bg_lavaworld</background>
     <background>background\background3</background>
+    <background>background\bg_title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -170,6 +172,9 @@
     <objects name="Game Modes">
       <object>objects\obj_stock_mode</object>
       <object>objects\obj_p1_spawn</object>
+    </objects>
+    <objects name="HUD">
+      <object>objects\obj_title</object>
     </objects>
   </objects>
   <rooms name="rooms">

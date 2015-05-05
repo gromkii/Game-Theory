@@ -60,6 +60,7 @@
       <sprite>sprites\spr_powerup_reflect</sprite>
     </sprites>
     <sprite>sprites\spr_blank</sprite>
+    <sprite>sprites\spr_controller</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_spikeworld</background>
@@ -175,13 +176,16 @@
     </objects>
     <objects name="HUD">
       <object>objects\obj_title</object>
+      <object>objects\obj_credits</object>
+      <object>objects\obj_controllers</object>
+      <object>objects\obj_debug</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_controller</room>
+    <room>rooms\room_title</room>
     <room>rooms\room_prototype</room>
     <rooms name="Menus">
-      <room>rooms\room_title</room>
       <room>rooms\room_credits</room>
       <room>rooms\room_controls</room>
       <room>rooms\room_mainmenu</room>
@@ -194,15 +198,9 @@
       </rooms>
       <rooms name="Spike World">
         <room>rooms\room_spike_stock</room>
-        <room>rooms\room_spike_timed</room>
-      </rooms>
-      <rooms name="Space">
-        <room>rooms\room_space_timed</room>
-        <room>rooms\room_space_stock</room>
       </rooms>
       <room>rooms\room_results</room>
     </rooms>
-    <room>rooms\room15</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -25,22 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.player1_health = 100;
-global.player2_health = 100;
-
-global.p1_stock = 3;
-global.p2_stock = 3;
-
-/*
-global.player1_stock = match_stock;
-global.player2_stock = match_stock;
-*/
+            <string>credits[0] = "Dax Richardson - Programming";
+credits[1] = "Edgar Gonzalez - Art";
+credits[2] = "Yunis Zujur - Art";
+credits[3] = "Santiago Lara - Level Design, Music";
+credits[4] = "(Presse B to Return to Main Menu)";
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -57,7 +52,54 @@ global.player2_stock = match_stock;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if gamepad_button_check_pressed(global.player1_pad,gp_face2)
+{
+    room_goto(room_title);
+}
+
+if keyboard_check_pressed(vk_escape)
+{
+    game_end();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_white)
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+
+for (i = 0; i &lt; 5; i++)
+{   
+    if (i = 4) draw_set_font(font_main);
+    else draw_set_font(font_HUD);
+    draw_text(room_width/2,room_height/3+(64*i),credits[i])
+}
+
+
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+</string>
           </argument>
         </arguments>
       </action>

@@ -54,6 +54,7 @@
       <sprite>sprites\spr_p2_port</sprite>
       <sprite>sprites\spr_reloading</sprite>
       <sprite>sprites\spr_title</sprite>
+      <sprite>sprites\spr_arena_selection</sprite>
     </sprites>
     <sprites name="Power-Up Effects">
       <sprite>sprites\spr_powerup_shield</sprite>
@@ -108,7 +109,6 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player2</object>
       <objects name="Mechanics">
-        <object>objects\obj_player_stats</object>
         <object>objects\obj_select_P1</object>
         <object>objects\obj_select_p2</object>
       </objects>
@@ -178,7 +178,8 @@
       <object>objects\obj_title</object>
       <object>objects\obj_credits</object>
       <object>objects\obj_controllers</object>
-      <object>objects\obj_debug</object>
+      <object>objects\obj_arena_selection</object>
+      <object>objects\obj_camera</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -28,8 +28,8 @@
             <string>global.player1_health = 100;
 global.player2_health = 100;
 
-global.p1_stock = 3;
-global.p2_stock = 3;
+global.p1_stock = global.reset;
+global.p2_stock = global.reset;
 
 /*
 global.player1_stock = match_stock;

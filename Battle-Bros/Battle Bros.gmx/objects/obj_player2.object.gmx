@@ -394,8 +394,6 @@ else if grounded = false //Various jumping animations.
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -412,20 +410,7 @@ else if grounded = false //Various jumping animations.
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_p2_port,0,16,1216);
-
-//P2 Health
-draw_set_color(c_white);
-draw_text(1116,20,string(obj_player.hit_points)+ "/100");
-draw_set_color(c_black);
-draw_text(1116,16,string(obj_player.hit_points)+ "/100");
-
-//P2 Stocks
-draw_set_color(c_white);
-draw_text(1116,40,"LIVES: " + string(global.p1_stock));
-draw_set_color(c_black);
-draw_text(1116,36,"LIVES: " + string(global.p1_stock));
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

@@ -84,6 +84,8 @@ image_xscale = sign(obj_player2.image_xscale);
     else hspeed -=1.5;
 }
 
+effect_create_below(ef_smoke,x,y,.3,c_gray);
+
 
 </string>
           </argument>

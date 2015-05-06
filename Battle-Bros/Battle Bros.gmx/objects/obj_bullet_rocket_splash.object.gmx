@@ -57,7 +57,7 @@ effect += expand;
 
 image_blend = c_red;
 
-effect_create_above(ef_explosion,x,y,.75,c_gray);
+effect_create_above(ef_explosion,x,y,1,c_gray);
 if image_xscale == 3
 {
     instance_destroy();

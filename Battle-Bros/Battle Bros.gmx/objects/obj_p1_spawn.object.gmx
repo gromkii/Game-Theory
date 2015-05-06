@@ -42,6 +42,7 @@ else if !instance_exists(obj_player2) &amp;&amp; global.p2_stock &gt; 0
     {
         alarm[0] = 30;
         can_hit = false;
+        
     }
 }
 

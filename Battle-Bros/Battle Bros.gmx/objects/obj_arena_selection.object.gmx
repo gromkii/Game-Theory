@@ -28,7 +28,7 @@
             <string>//Arena Names
 arena[0] = "Lava Planet";
 arena[1] = "Spike World";
-arena[2] = "Space Port";
+arena[2] = "Training Stage";
 
 //Default Menu Positions
 menu_selection = 0;

@@ -59,7 +59,7 @@ wviewStart = view_wview[0]
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if players == 2
+            <string>if players == 2 &amp;&amp; (instance_exists(obj_player) &amp;&amp; instance_exists(obj_player2))
 {
         p1x = obj_player.x // gather x/y positions for 2 players mode
         p1y = obj_player.y

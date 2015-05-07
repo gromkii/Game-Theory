@@ -62,6 +62,7 @@
     </sprites>
     <sprite>sprites\spr_blank</sprite>
     <sprite>sprites\spr_controller</sprite>
+    <sprite>sprites\sprite36</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_spikeworld</background>
@@ -88,6 +89,7 @@
       </scripts>
       <scripts name="Draw">
         <script>scripts\draw_player1.gml</script>
+        <script>scripts\explode.gml</script>
       </scripts>
     </scripts>
     <scripts name="HUD">
@@ -98,6 +100,7 @@
   <fonts name="fonts">
     <font>fonts\font_main</font>
     <font>fonts\font_HUD</font>
+    <font>fonts\font_time</font>
   </fonts>
   <objects name="objects">
     <objects name="Environments">
@@ -158,6 +161,7 @@
         <object>objects\obj_pickup_assault</object>
         <object>objects\obj_pickup_rocket</object>
         <object>objects\obj_pickup</object>
+        <object>objects\obj_item_spawn</object>
       </objects>
       <objects name="Power-Ups">
         <object>objects\obj_powerup_shield</object>
@@ -172,7 +176,10 @@
     <object>objects\obj_title_screen</object>
     <objects name="Game Modes">
       <object>objects\obj_stock_mode</object>
+      <object>objects\obj_timed_mode</object>
       <object>objects\obj_p1_spawn</object>
+      <object>objects\obj_p2_spawn</object>
+      <object>objects\obj_game_over</object>
     </objects>
     <objects name="HUD">
       <object>objects\obj_title</object>
@@ -197,9 +204,11 @@
     <rooms name="Arenas">
       <rooms name="Lava Word">
         <room>rooms\room_lava_stock</room>
+        <room>rooms\room_lava_timed</room>
       </rooms>
       <rooms name="Spike World">
         <room>rooms\room_spike_stock</room>
+        <room>rooms\room_spike_timed</room>
       </rooms>
       <room>rooms\room_results</room>
     </rooms>

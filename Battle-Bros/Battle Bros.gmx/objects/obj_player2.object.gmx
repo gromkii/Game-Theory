@@ -235,19 +235,21 @@ can_hit = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Player Behaviors
-player_controls(); // Basic button configuration
-player_movement(); // Collision and Movement
-player_actions(); // Weapon Cycle, Rolling, etc.
-magazine_size(); // Establishes max magazine sizes and reloading
-
-//Fire Weapons
-weapon_fire(0,obj_bullet_pistol_p2);
-weapon_fire(1,obj_bullet_shotgun_p2);
-weapon_fire(2,obj_bullet_assault_p2);
-weapon_fire(3,obj_bullet_rocket_p2);
-weapon_fire(4,obj_bullet_railgun_charge_p2);
-
+            <string>if global.game_over = false
+{
+    ///Player Behaviors
+    player_controls(); // Basic button configuration
+    player_movement(); // Collision and Movement
+    player_actions(); // Weapon Cycle, Rolling, etc.
+    magazine_size(); // Establishes max magazine sizes and reloading
+    
+    //Fire Weapons
+    weapon_fire(0,obj_bullet_pistol_p2);
+    weapon_fire(1,obj_bullet_shotgun_p2);
+    weapon_fire(2,obj_bullet_assault_p2);
+    weapon_fire(3,obj_bullet_rocket_p2);
+    weapon_fire(4,obj_bullet_railgun_charge_p2);
+}
 
 //Interaction with item pickups.
 ammo_pickup(obj_pickup_pistol,0);
@@ -278,9 +280,16 @@ if hit_points &lt;= 0
 {
     global.p2_stock -= 1;
     instance_destroy();
+    explode();
     
 }
 
+if place_meeting(x,y,obj_lava_damage) &amp;&amp; global.gamemode = 1
+{
+    instance_destroy();
+    explode();
+    global.player1_score += 1;
+}
 
 
 

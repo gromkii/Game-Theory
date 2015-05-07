@@ -335,7 +335,7 @@ if (arena_selected = true)
        
     // ---- Timed Rules ---- //
     
-    if mode_selection = 1
+    else if mode_selection = 1
     {
         draw_set_font(font_HUD);
         if (menu_selection = 1) draw_set_color(c_red);
@@ -349,10 +349,24 @@ if (arena_selected = true)
         
     
     
-        if (confirm) 
+        if confirm &amp;&amp; can_confirm = true 
         {
             
-            global.time_limit = time_selection[rule_selection];
+            global.reset_time = time_selection[rule_selection];
+            switch(arena_selection)
+            {
+            case 0: 
+                room_goto(room_lava_timed);
+                break;
+                
+            case 1:
+                room_goto(room_spike_timed);
+                break;
+                
+            default:
+                room_goto(room_prototype);
+                break;
+            }
             
         }
     

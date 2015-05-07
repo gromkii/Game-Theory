@@ -31,6 +31,7 @@ if place_meeting(x,y,obj_player)
 {
     with(obj_player)
     {
+        explode()
         if global.gamemode = 0
         {
             instance_destroy();
@@ -40,13 +41,14 @@ if place_meeting(x,y,obj_player)
         if global.gamemode = 1
         {
             instance_destroy();
-            global.p2_score += 1;
+            global.player2_score += 1;
         }
     }
 }
 
 if place_meeting(x,y,obj_player2)
 {
+    explode()
     with(obj_player2)
     if global.gamemode = 0
     {
@@ -57,7 +59,7 @@ if place_meeting(x,y,obj_player2)
     if global.gamemode = 1
     {
         instance_destroy();
-        global.p1_score += 1;
+        global.player1_score += 1;
     }
 }
     

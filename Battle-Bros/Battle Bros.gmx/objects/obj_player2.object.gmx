@@ -38,6 +38,29 @@ pad_num = global.player2_pad; //Make a script to establish controller values!
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>movespeed = 13;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="6">
       <action>
         <libid>1</libid>
@@ -242,6 +265,7 @@ can_hit = true;
     player_movement(); // Collision and Movement
     player_actions(); // Weapon Cycle, Rolling, etc.
     magazine_size(); // Establishes max magazine sizes and reloading
+    player_sounds();
     
     //Fire Weapons
     weapon_fire(0,obj_bullet_pistol_p2);
@@ -313,9 +337,34 @@ if place_meeting(x,y,obj_lava_damage) &amp;&amp; global.gamemode = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Hit stun.
+            <string>///Powerup Effects
+if place_meeting(x,y,obj_powerup_shield)
+{
+    with (instance_nearest(x,y,obj_powerup_shield))
+    {
+        instance_destroy();
+    }
+    instance_create(x,y,obj_power_shield_p2)
+}
 
+if place_meeting(x,y,obj_powerup_reflect)
+{
+    with (instance_nearest(x,y,obj_powerup_reflect))
+    {
+        instance_destroy();
+    }
+    instance_create(x,y,obj_power_reflect_p2);
+}
 
+if place_meeting(x,y,obj_powerup_speed)
+{
+    movespeed = 20;
+    alarm[7] = 300;    
+    with (instance_nearest(x,y,obj_powerup_speed))
+    {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

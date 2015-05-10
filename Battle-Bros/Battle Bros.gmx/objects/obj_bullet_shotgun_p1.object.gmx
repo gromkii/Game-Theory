@@ -29,6 +29,8 @@
 
 bounce = 3;
 image_xscale = sign(obj_player.image_xscale);
+
+audio_play_sound(sfx_shotgun,3,0);
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = obj_player2.image_xscale * 3;
+            <string>if !instance_exists(obj_player2) instance_destroy();
+
+hspeed = obj_player2.image_xscale * 3;
 faster = false;
 
 alarm[0] = 30;
@@ -33,6 +35,7 @@ alarm[0] = 30;
 dir = sign(hspeed);
 
 image_xscale = sign(obj_player2.image_xscale);
+audio_play_sound(sfx_rocket,3,0);
 </string>
           </argument>
         </arguments>
@@ -80,8 +83,13 @@ image_xscale = sign(obj_player2.image_xscale);
             <kind>1</kind>
             <string>if faster = true
 {
-    if sign(obj_player2.image_xscale == 1) hspeed += 1.5;
-    else hspeed -=1.5;
+    if instance_exists(obj_player2)
+    {
+        if sign(obj_player2.image_xscale == 1) hspeed += 1.5;
+        else hspeed -=1.5;
+    }
+    
+    else instance_destroy();
 }
 
 effect_create_below(ef_smoke,x,y,.3,c_gray);

@@ -29,6 +29,8 @@
 
 hit_points = 30; //Shield Absorptions.
 can_hit = true;
+
+image_speed = .5;
 </string>
           </argument>
         </arguments>
@@ -80,6 +82,29 @@ can_hit = true;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if !instance_exists(obj_player) instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -97,7 +122,9 @@ can_hit = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_xscale &lt; 3 &amp;&amp; image_yscale &lt; 3
+            <string>if !instance_exists(obj_player) instance_destroy();
+
+if image_xscale &lt; 3 &amp;&amp; image_yscale &lt; 3
 {
     image_xscale += .05;
     image_yscale += .05;
@@ -116,8 +143,13 @@ else if place_meeting(x,y,obj_bullet2) &amp;&amp; can_hit = true
     with (instance_nearest(x,y,obj_bullet2)) instance_destroy();
 }
 
-x += obj_player.hsp;
-y += obj_player.vsp;
+if instance_exists(obj_player)
+{
+    x += obj_player.hsp;
+    y += obj_player.vsp;
+}
+
+else instance_destroy();
 
 
 </string>

@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>speed = obj_player2.image_xscale * 10;
+
+audio_play_sound(sfx_railgun,3,0)
 </string>
           </argument>
         </arguments>

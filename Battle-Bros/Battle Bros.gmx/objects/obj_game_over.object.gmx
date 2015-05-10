@@ -96,11 +96,17 @@ if confirm &amp;&amp; global.game_over = true
             break;
         
         case 1:
-            room_goto(room_arena_selection)
+            room_goto(room_arena_selection);
+            audio_stop_all();
+            audio_play_sound(sfx_menu,2,0);
+            audio_play_sound(music_title,1,true);
             break;
 
         default:
             room_goto(room_title);
+            audio_stop_all();
+            audio_play_sound(sfx_menu,2,0);
+            audio_play_sound(music_title,1,true);
             break;
     }
 }

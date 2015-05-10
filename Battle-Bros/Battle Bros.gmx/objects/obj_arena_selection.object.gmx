@@ -324,6 +324,10 @@ if (arena_selected = true)
                 room_goto(room_spike_stock);
                 break;
                 
+            case 2:
+                room_goto(room_train_stock);
+                break;
+                
             default:
                 room_goto(room_prototype);
                 break;
@@ -361,6 +365,10 @@ if (arena_selected = true)
                 
             case 1:
                 room_goto(room_spike_timed);
+                break;
+                
+            case 2:
+                room_goto(room_train_timed);
                 break;
                 
             default:

@@ -5,7 +5,22 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sounds name="Music">
+      <sound>sound\music_title</sound>
+      <sound>sound\music_lava</sound>
+      <sound>sound\music_spike</sound>
+      <sound>sound\music_training</sound>
+    </sounds>
+    <sounds name="Sound Effects">
+      <sound>sound\sfx_menu</sound>
+      <sound>sound\sfx_cycle</sound>
+      <sound>sound\sfx_explosion</sound>
+      <sound>sound\sfx_rocket</sound>
+      <sound>sound\sfx_jump</sound>
+      <sound>sound\sfx_gun</sound>
+      <sound>sound\sfx_railgun</sound>
+      <sound>sound\sfx_shotgun</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Environments">
@@ -71,6 +86,7 @@
     <background>background\bg_lavaworld</background>
     <background>background\background3</background>
     <background>background\bg_title</background>
+    <background>background\bg_training</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -88,6 +104,7 @@
         <script>scripts\player_movement.gml</script>
         <script>scripts\reload_alarm.gml</script>
         <script>scripts\weapon_fire.gml</script>
+        <script>scripts\player_sounds.gml</script>
       </scripts>
       <scripts name="Draw">
         <script>scripts\draw_player1.gml</script>
@@ -164,6 +181,7 @@
         <object>objects\obj_pickup_rocket</object>
         <object>objects\obj_pickup</object>
         <object>objects\obj_item_spawn</object>
+        <object>objects\obj_powerup_spawn</object>
       </objects>
       <objects name="Power-Ups">
         <object>objects\obj_powerup_shield</object>
@@ -172,8 +190,14 @@
       </objects>
     </objects>
     <objects name="Powers">
-      <object>objects\obj_power_shield_p1</object>
-      <object>objects\obj_power_reflect_p1</object>
+      <objects name="P1 Power-Up">
+        <object>objects\obj_power_reflect_p1</object>
+        <object>objects\obj_power_shield_p1</object>
+      </objects>
+      <objects name="P2 Power-Ups">
+        <object>objects\obj_power_shield_p2</object>
+        <object>objects\obj_power_reflect_p2</object>
+      </objects>
     </objects>
     <object>objects\obj_title_screen</object>
     <objects name="Game Modes">
@@ -212,7 +236,10 @@
         <room>rooms\room_spike_stock</room>
         <room>rooms\room_spike_timed</room>
       </rooms>
-      <room>rooms\room_results</room>
+      <rooms name="Training Room">
+        <room>rooms\room_train_stock</room>
+        <room>rooms\room_train_timed</room>
+      </rooms>
     </rooms>
   </rooms>
   <help>

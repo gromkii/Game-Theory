@@ -79,7 +79,6 @@
     </sprites>
     <sprite>sprites\spr_blank</sprite>
     <sprite>sprites\spr_controller</sprite>
-    <sprite>sprites\sprite36</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_spikeworld</background>
@@ -108,7 +107,6 @@
       </scripts>
       <scripts name="Draw">
         <script>scripts\draw_player1.gml</script>
-        <script>scripts\explode.gml</script>
       </scripts>
     </scripts>
     <scripts name="HUD">
@@ -119,7 +117,6 @@
   <fonts name="fonts">
     <font>fonts\font_main</font>
     <font>fonts\font_HUD</font>
-    <font>fonts\font_time</font>
   </fonts>
   <objects name="objects">
     <objects name="Environments">
@@ -204,7 +201,6 @@
       <object>objects\obj_stock_mode</object>
       <object>objects\obj_timed_mode</object>
       <object>objects\obj_p1_spawn</object>
-      <object>objects\obj_p2_spawn</object>
       <object>objects\obj_game_over</object>
     </objects>
     <objects name="HUD">

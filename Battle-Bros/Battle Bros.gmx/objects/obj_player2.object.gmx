@@ -304,14 +304,14 @@ if hit_points &lt;= 0
 {
     global.p2_stock -= 1;
     instance_destroy();
-    explode();
+  
     
 }
 
 if place_meeting(x,y,obj_lava_damage) &amp;&amp; global.gamemode = 1
 {
     instance_destroy();
-    explode();
+    
     global.player1_score += 1;
 }
 
